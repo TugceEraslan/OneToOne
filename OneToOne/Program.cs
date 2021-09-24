@@ -18,7 +18,6 @@ namespace OneToOne
         public DbSet<User> Users { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Address> Addresses { get; set; }
-        
 
         public static readonly ILoggerFactory MyLoggerFactory =
             LoggerFactory.Create(builder => { builder.AddConsole(); });
@@ -93,18 +92,6 @@ namespace OneToOne
         public int CategoryId { get; set; }
     }
 
-    class Order
-    {
-
-        // Primary key(Id,<type_name>Id)
-        public int Id { get; set; }
-
-
-        [MaxLength(100)]
-        [Required]
-        public string Name { get; set; }
-        public int CategoryId { get; set; }
-    }
 
     class Category
     {

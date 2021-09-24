@@ -103,6 +103,16 @@ namespace OneToOne
         public string Name { get; set; }
     }
 
+    class Order
+    {
+        public int Id { get; set; }
+
+
+        [MaxLength(100)]
+        [Required]
+        public string Name { get; set; }
+    }
+
 
     class Program
     {
